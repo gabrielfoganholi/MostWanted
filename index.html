@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Most Wanted Garage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos para o texto centralizado e justificado */
+        .section-padding p {
+            text-align: justify;
+            margin: 0 auto;
+            max-width: 800px; /* Largura máxima para o texto */
+        }
+    </style>
+</head>
+<body>
+
+   <!-- Header -->
+<header>
+    <nav>
+        <div class="logo">
+            <img src="./img/logo.png" alt="Logo da Most Wanted Garage" style="height: 50px;"> <!-- Adicione a imagem da logo -->
+            <h1>Most Wanted Garage</h1>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+        <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#gallery">Galeria</a></li> <!-- Não esqueça de adicionar o link da galeria -->
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Banner Home -->
+<section class="banner" id="home">
+    <video autoplay muted loop class="banner-video">
+        <source src="./img/2c74ac7b-df47-4cc2-93e2-04e2bb6bee6f.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+    </video>
+    <div class="banner-content">
+        <h2>Bem-vindo à Most Wanted Garage</h2>
+        <p>Especialistas em Customização e Manutenção de Veículos</p>
+        <a href="https://wa.me/11943604852" class="btn-whatsapp" target="_blank">Fale Conosco no WhatsApp</a>
+    </div>
+</section>
+
+<!-- Sobre -->
+<section class="section-padding" id="about">
+    <h2>Sobre Nós</h2>
+    <p>A <strong><em>Most Wanted Garage</em></strong> é uma mecânica automotiva focada em customização e manutenção de veículos. Nossa equipe de profissionais experientes busca sempre a <strong><em>excelência</em></strong> no atendimento, oferecendo <strong><em>soluções personalizadas</em></strong> e garantindo a satisfação de cada cliente.</p>
+    <p>Com um compromisso inabalável com a qualidade, utilizamos as melhores práticas e tecnologias para cuidar do seu veículo. Na Most Wanted Garage, você encontra não apenas serviços de <strong><em>alta qualidade</em></strong>, mas também um atendimento que valoriza a <strong><em>confiança</em></strong> e o relacionamento com nossos clientes.</p>
+</section>
+
+<!-- Serviços -->
+<section class="section-padding" id="services">
+    <h2>CONHEÇA OS NOSSOS SERVIÇOS!</h2>
+    <div class="services">
+        <div class="service-item">
+            <h3>Carros e Motos</h3><br>
+            <p>Trabalhamos com carros e motos de todas as marcas e modelos.</p>
+            <img src="./img/carros_motos.png" alt="Carros e Motos" />
+        </div>
+        <div class="service-item">
+            <h3>Revisão Completa</h3><br>
+            <p>Revisão e manutenção completa.</p>
+            <img src="./img/revisao.png" alt="Revisão Completa" />
+        </div>
+        <div class="service-item">
+            <h3>Customização</h3><br>
+            <p>Customização de veículos em todo o Brasil.</p>
+            <img src="./img/costumizacao.png" alt="Customização" />
+        </div>
+        <div class="service-item">
+            <h3>Pinturas Especiais</h3><br>
+            <p>Pinturas especiais para deixar seu veículo único.</p>
+            <img src="./img/pinturas.png" alt="Pinturas Especiais" />
+        </div>
+        <div class="service-item">
+            <h3>Polimento de Vidros</h3><br>
+            <p>Polimento de vidros para melhor visibilidade e estética.</p>
+            <img src="./img/polimento.png" alt="Polimento de Vidros" />
+        </div>
+    </div>
+</section>
+
+<!-- Galeria -->
+<section class="section-padding" id="gallery">
+    <h2>Galeria de Veículos</h2>
+    <div class="photo-gallery">
+        <div class="photo-item">
+            <img src="./img/carroAzul.jpeg" alt="Carro 1">
+        </div>
+        <div class="photo-item">
+            <img src="./img/motoLaranja.jpeg" alt="Carro 2">
+        </div>
+        <div class="photo-item">
+            <img src="./img/carroVermelho.jpeg" alt="Carro 3">
+        </div>
+        <div class="photo-item">
+            <img src="./img/carroVerde.jpeg" alt="Carro 4">
+        </div>
+        <div class="photo-item">
+            <img src="./img/motoPreta.jpeg" alt="Carro 5">
+        </div>
+        <div class="photo-item">
+            <img src="./img/carroLaranja.jpeg" alt="Carro 6">
+        </div>
+    </div>
+</section>
+
+<!-- Contato -->
+<section class="section-padding" id="contact">
+    <h2>Entre em Contato</h2>
+    <div class="contact-info">
+        <p>Rua Corumbá, 73, Vila Alice, Santo André - SP</p>
+        <p>Telefone: <strong>(11) 94360-4852 (Tratar com Wilson)</strong></p>
+    </div>
+
+<!-- Mapa -->
+<br><div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!4v1729575854911!6m8!1m7!1sUv8u0yVX-myOtTSITOAQAg!2m2!1d-23.6609550822356!2d-46.54345587847746!3f102.04!4f0!5f0.7820865974627469"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <!-- Botões do WhatsApp e Instagram -->
+    <div class="social-media">
+        <br><br><a href="https://wa.me/11943604852" class="btn-whatsapp" target="_blank">Fale Conosco no WhatsApp</a>
+        <a href="https://www.instagram.com/mostwantedgaragee/" class="instagram-link" target="_blank">@mostwantedgaragee</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Most Wanted Garage - Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
