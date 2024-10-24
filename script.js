@@ -9,6 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+
 // Alternar o menu responsivo
 const menuToggle = document.querySelector('#mobile-menu');
 const navList = document.querySelector('.nav-list');
@@ -30,6 +31,7 @@ window.addEventListener('touchmove', function(e) {
         e.preventDefault(); // Impede a rolagem horizontal apenas se o menu estiver ativo
     }
 }, { passive: false });
+
 
 // Impede a rolagem do corpo se o menu estiver ativo
 document.addEventListener('wheel', function(event) {
