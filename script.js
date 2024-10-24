@@ -40,8 +40,4 @@ document.addEventListener('wheel', function(event) {
     }
 }, { passive: false });
 
-document.addEventListener('touchmove', function(event) {
-    if (navList.classList.contains('active')) {
-        event.preventDefault(); // Impede a rolagem do corpo
-    }
-}, { passive: false });
+
