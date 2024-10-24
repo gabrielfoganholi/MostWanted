@@ -33,15 +33,3 @@ window.addEventListener('touchmove', function(e) {
 }, { passive: false });
 
 
-// Impede a rolagem do corpo se o menu estiver ativo
-document.addEventListener('wheel', function(event) {
-    if (navList.classList.contains('active')) {
-        event.preventDefault(); // Impede a rolagem do corpo
-    }
-}, { passive: false });
-
-document.addEventListener('touchmove', function(event) {
-    if (navList.classList.contains('active')) {
-        event.preventDefault(); // Impede a rolagem do corpo
-    }
-}, { passive: false });
