@@ -13,25 +13,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const menuToggle = document.querySelector('#mobile-menu');
 const navList = document.querySelector('.nav-list');
 
-// Adiciona o evento de clique para alternar a classe 'active' no menu
 menuToggle.addEventListener('click', function() {
     navList.classList.toggle('active');
 });
 
-// Carrossel de Imagens
+// Prevenir rolagem horizontal
+window.addEventListener('touchmove', function(e) {
+    e.preventDefault(); // Impede a rolagem ao arrastar na tela
+}, { passive: false });
+
+// Carrossel de Imagens (se houver)
 let currentIndex = 0;
 const totalItems = document.querySelectorAll('.carousel-item').length;
 
-document.querySelector('#nextBtn').addEventListener('click', function() {
-    currentIndex = (currentIndex + 1) % totalItems; // Move para o próximo item
-    updateCarousel();
-});
+if (totalItems > 0) { // Verifica se existem itens no carrossel
+    document.querySelector('#nextBtn').addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % totalItems; // Move para o próximo item
+        updateCarousel();
+    });
 
-document.querySelector('#prevBtn').addEventListener('click', function() {
-    currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Move para o item anterior
-});
+    document.querySelector('#prevBtn').addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Move para o item anterior
+        updateCarousel();
+    });
 
-function updateCarousel() {
-    const carouselInner = document.querySelector('.carousel-inner');
-    carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`; // Atualiza a posição do carrossel
+    function updateCarousel() {
+        const carouselInner = document.querySelector('.carousel-inner');
+        carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`; // Atualiza a posição do carrossel
+    }
 }
