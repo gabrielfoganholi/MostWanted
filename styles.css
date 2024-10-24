@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
     text-align: center; /* Centraliza todos os textos */
     color: #fff; /* Cor do texto padrão para todo o body */
+    overflow-x: hidden;
 }
 
 header {
@@ -136,7 +137,7 @@ nav .nav-list li a:hover {
     top: 50%; /* Centraliza verticalmente */
     left: 50%; /* Centraliza horizontalmente */
     transform: translate(-50%, -50%); /* Ajusta a posição para que o conteúdo fique realmente centralizado */
-    color: white; /* Cor do texto, pode ser ajustada conforme necessário */
+    color: white; /* Cor do texto */
     text-align: center; /* Centraliza o texto */
     z-index: 1; /* Certifica que o conteúdo fique acima do vídeo */
 }
@@ -195,45 +196,36 @@ nav .nav-list li a:hover {
     margin-top: 20px;
 }
 
+.services p {
+    text-align: left; /* Alinha o texto à esquerda */
+    margin: 0; /* Remove margens verticais do parágrafo */
+}
+
+
 .service-item {
-    background-color: #fff; /* Cor de fundo */
-    border: 1px solid #ccc; /* Borda */
-    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     padding: 20px;
     margin: 10px;
-    width: 200px; /* Largura fixa para cada item */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
-    transition: transform 0.2s; /* Transição suave */
+    width: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
     color: #000;
     white-space: normal;
     line-height: 1.5;
 }
 
 .service-item img {
-    width: 100%; /* Ajusta a largura da imagem para caber na caixinha */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 0 0 8px 8px; /* Bordas arredondadas na parte inferior da imagem */
-    margin-top: 10px; /* Espaçamento acima da imagem */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 10px;
 }
 
 .service-item:hover {
-    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
-}
-
-/* Para as imagens nos serviços */
-.service-item img {
-    width: 100%; /* Ajusta a largura da imagem para caber na caixinha */
-    height: 200px; /* Altura fixa para as imagens, ajustada para ser igual à largura */
-    object-fit: cover; /* Garante que a imagem cubra a área designada */
-    border-radius: 15px; /* Cantos arredondados */
-    margin-top: 10px; /* Espaçamento acima da imagem */
-}
-
-/* Galeria */
-#gallery {
-    background-color: #; /* Cor de fundo cinza escuro */
-    color: #fff; /* Cor do texto branco */
-    padding: 40px 20px; /* Ajuste o padding conforme necessário */
+    transform: translateY(-5px);
 }
 
 .photo-gallery {
@@ -244,42 +236,44 @@ nav .nav-list li a:hover {
 }
 
 .photo-item {
-    margin: 10px; /* Espaço entre as caixinhas */
-    overflow: hidden; /* Esconde o excesso de imagem */
-    width: 300px; /* Aumente a largura para as telas maiores */
-    height: 250px; /* Aumente a altura para as caixinhas */
+    margin: 10px;
+    overflow: hidden;
+    width: 300px;
+    height: 250px;
 }
 
 .photo-item img {
-    width: 100%; /* Ajusta a largura da imagem para caber na caixinha */
-    height: 100%; /* Mantém a altura da imagem para caber na caixinha */
-    object-fit: cover; /* Garante que a imagem cubra a área designada */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .photo-item:hover {
-    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+    transform: translateY(-5px);
 }
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .photo-gallery {
-        flex-direction: column; /* Altera a direção do layout para coluna */
-        align-items: center; /* Centraliza os itens na coluna */
+        flex-direction: column;
+        align-items: center;
     }
 
     .photo-item {
-        width: 80%; /* Largura maior para cada item na coluna */
-        height: auto; /* Ajusta a altura para manter a proporção */
-        max-width: 400px; /* Limita a largura máxima para dispositivos grandes */
+        width: 80%;
+        height: auto;
+        max-width: 400px;
     }
 }
 
 @media (max-width: 480px) {
     .photo-item {
-        width: 90%; /* Largura maior em telas menores */
-        height: auto; /* Ajusta a altura para manter a proporção */
+        width: 90%;
+        height: auto;
     }
 }
+
+
 
 .map-container {
     position: relative;
@@ -298,11 +292,15 @@ nav .nav-list li a:hover {
     border: 0;
 }
 
-.social-media {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Ajuste de tamanho do mapa para desktops */
+@media (min-width: 1024px) {
+    .map-container {
+        width: 100%; /* Mantém a largura total */
+        height: 400px; /* Define uma altura específica para desktops */
+        padding-bottom: 0; /* Remove o padding que é usado para a proporção */
+    }
 }
+
 
 footer {
     background-color: #000;

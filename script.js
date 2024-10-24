@@ -13,6 +13,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const menuToggle = document.querySelector('#mobile-menu');
 const navList = document.querySelector('.nav-list');
 
+// Adiciona o evento de clique para alternar a classe 'active' no menu
 menuToggle.addEventListener('click', function() {
     navList.classList.toggle('active');
 });
@@ -28,7 +29,6 @@ document.querySelector('#nextBtn').addEventListener('click', function() {
 
 document.querySelector('#prevBtn').addEventListener('click', function() {
     currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Move para o item anterior
-    updateCarousel();
 });
 
 function updateCarousel() {
