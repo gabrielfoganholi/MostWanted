@@ -11,7 +11,6 @@ body {
     line-height: 1.6;
     text-align: center; /* Centraliza todos os textos */
     color: #fff; /* Cor do texto padrão para todo o body */
-    overflow-x: hidden;
 }
 
 header {
@@ -100,7 +99,7 @@ nav .nav-list li a:hover {
         justify-content: center;
         transform: translateX(100%);
         transition: transform 0.5s ease-in-out;
-        overflow-x: hidden; /* Impede a rolagem horizontal */
+        overflow-y: auto; /* Permite a rolagem vertical */
     }
 
     nav .nav-list li {
@@ -115,11 +114,6 @@ nav .nav-list li a:hover {
         display: block;
     }
 }
-
-body {
-    overflow-x: hidden; /* Impede a rolagem horizontal em toda a página */
-}
-
 
 .section-padding {
     padding: 60px 20px; /* Padding padrão para telas grandes */
@@ -139,6 +133,21 @@ body {
     }
 }
 
+/* O resto do CSS permanece o mesmo, incluindo estilos de banner, serviços, galerias, etc. */
+
+.section-padding p {
+    text-align: left; /* Alinhamento padrão */
+    margin: 0 auto;
+    max-width: 800px; /* Largura máxima */
+    word-break: break-word; /* Quebra de palavras longas */
+    overflow-wrap: break-word; /* Quebra de palavras */
+}
+
+@media (min-width: 768px) {
+    .section-padding p {
+        text-align: justify; /* Justificação em telas maiores */
+    }
+}
 
 .banner {
     position: relative; /* Permite que o conteúdo fique sobre o vídeo */
