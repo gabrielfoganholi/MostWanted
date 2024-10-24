@@ -9,9 +9,9 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #141414;
     line-height: 1.6;
-    text-align: center; /* Centraliza todos os textos */
-    color: #fff; /* Cor do texto padrão para todo o body */
-    overflow-x: hidden; /* Impede a rolagem horizontal em toda a página */
+    text-align: center;
+    color: #fff;
+    overflow-x: hidden;
 }
 
 header {
@@ -24,24 +24,116 @@ header {
     z-index: 10;
 }
 
+/* Banner */
+.banner {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.78;
+}
+
+.banner-content {
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    max-width: 800px; /* Limita a largura do conteúdo para melhor centralização */
+    margin: 0 auto; /* Garante que o conteúdo esteja centralizado horizontalmente */
+    padding: 0 15px;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.banner-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.banner-content a {
+    background-color: #28a745;
+    padding: 1rem 2rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Garante que o botão se comporte corretamente */
+    margin-bottom: 1rem;
+}
+
+.banner-content a:hover {
+    background-color: #218838;
+}
+
+/* Seção de redes sociais */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 2rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #28a745; /* Cor ao passar o mouse */
+}
+
+/* Outros ajustes */
+.service-item img, .photo-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 .logo {
     display: flex;
-    align-items: center; /* Alinha o texto e a imagem no centro */
+    align-items: center;
 }
 
 .logo img {
-    width: 50px; /* Ajuste conforme necessário */
-    height: auto; /* Mantém a proporção */
-    margin-right: 10px; /* Espaço entre o texto e a imagem da logo */
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
 }
 
 @media (max-width: 768px) {
     .logo h1 {
-        font-size: 1.5rem; /* Ajuste o tamanho do texto para dispositivos menores */
+        font-size: 1.5rem;
     }
 
     .logo img {
-        width: 40px; /* Ajuste para a responsividade */
+        width: 40px;
+    }
+
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner-content p {
+        font-size: 1.25rem;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem; /* Tamanho menor para dispositivos móveis */
     }
 }
 
@@ -49,6 +141,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
 }
 
 nav .logo h1 {
