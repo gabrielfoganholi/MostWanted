@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
     text-align: center; /* Centraliza todos os textos */
     color: #fff; /* Cor do texto padrão para todo o body */
+    overflow-x: hidden; /* Impede a rolagem horizontal em toda a página */
 }
 
 header {
